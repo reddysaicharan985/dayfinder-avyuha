@@ -1,5 +1,7 @@
 {
-  "projects": {},
+  "projects": {
+    "default": "avyuha-website"
+  },
   "targets": {
     "avyuha-website": {
       "hosting": {
@@ -8,6 +10,5 @@
         ]
       }
     }
-  },
-  "etags": {}
+  }
 }

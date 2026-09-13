@@ -1,55 +1,57 @@
 # DayFinder by Avyuha
 
-DayFinder is a responsive single-page calendar learning application. It can:
+DayFinder is a dependency-free collection of ten private date and calendar utilities. It runs entirely in the browser, works offline after the first successful visit, and is designed for everyday, educational and professional planning.
 
-- Convert a complete date into its weekday.
-- Find every occurrence of a chosen weekday in a selected month and year.
-- Explain month lengths, leap years and weekday calculation.
-- Run built-in test cases for known dates.
+Live site: <https://dayfinder-avyuha.web.app>
 
-## Open in VS Code
+## Included tools
 
-1. Extract the ZIP file.
-2. Open the `DayFinder-Avyuha-VSCode` folder in VS Code.
-3. Open `dist/index.html`.
-4. Right-click the file and select **Open with Live Server**.
+1. Working Days Calculator — the featured tool
+2. Weekday Finder
+3. Age Calculator
+4. Date Difference Calculator
+5. Add or Subtract Dates
+6. Find Specific Weekdays in a Month
+7. Countdown Calculator
+8. ISO Week Number Calculator
+9. Leap-Year Checker
+10. Printable Monthly Calendar
 
-You can also double-click `dist/index.html` to run it directly in a browser.
+The calculation engine uses proleptic Gregorian rules from 1583 onward. Indian national and state presets are fixed-date references, not a complete official holiday database. Users should add current festival, bank and gazette holidays manually and verify critical results with the relevant authority.
 
-## Deploy as an Avyuha Firebase Hosting site
+## Run locally
 
-Install the Firebase CLI if it is not already installed:
+Open `dist/index.html` directly for basic use, or serve the `dist` directory so the service worker can be tested:
 
-```powershell
-npm install -g firebase-tools
+```bash
+python -m http.server 5500 --directory dist
 ```
 
-From this project folder, run:
+Then visit <http://localhost:5500>.
 
-```powershell
-firebase login
-firebase use avyuha-website
-firebase hosting:sites:create YOUR_UNIQUE_SITE_ID
-firebase target:apply hosting dayfinder YOUR_UNIQUE_SITE_ID
+## Build and test
+
+No dependencies are required.
+
+```bash
+npm run build
+npm test
+```
+
+`npm run build` regenerates the tool and information pages from `scripts/generate-pages.js`. The pure calculation functions live in `dist/date-core.js` and are covered by Node tests.
+
+## Deploy to Firebase
+
+The repository is configured for the existing `dayfinder` Firebase Hosting target:
+
+```bash
 firebase deploy --only hosting:dayfinder
 ```
 
-Replace `YOUR_UNIQUE_SITE_ID` with an available ID such as `avyuha-dayfinder`.
-Run `firebase hosting:sites:create` only once. Future updates require only:
+## Privacy
 
-```powershell
-firebase deploy --only hosting:dayfinder
-```
+Dates are calculated locally in the browser. DayFinder does not require an account or intentionally upload calculator inputs. See `dist/privacy.html` for the complete notice.
 
-## Project structure
+## Important limitation
 
-```text
-DayFinder-Avyuha-VSCode/
-|-- dist/
-|   `-- index.html
-|-- firebase.json
-`-- README.md
-```
-
-Created by Mukkara Sai Charan Reddy as an Avyuha learning project.
-
+DayFinder is an informational planning tool. Verify dates against official sources for legal, payroll, banking, historical or safety-critical decisions.

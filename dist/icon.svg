@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="DayFinder D logo">
+  <rect width="512" height="512" rx="116" fill="#185747"/>
+  <path d="M144 104h107c102 0 165 56 165 152s-63 152-165 152H144V104zm99 232c57 0 88-28 88-80s-31-80-88-80h-15v160h15z" fill="#fff"/>
+  <rect x="116" y="70" width="280" height="24" rx="12" fill="#e5b84d"/>
+</svg>

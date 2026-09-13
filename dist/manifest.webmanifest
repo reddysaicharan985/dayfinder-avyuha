@@ -1,0 +1,11 @@
+{
+  "name": "DayFinder by Avyuha",
+  "short_name": "DayFinder",
+  "description": "Private date and calendar tools for everyday and professional planning.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f3",
+  "theme_color": "#185747",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]
+}
